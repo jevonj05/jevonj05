@@ -1,18 +1,12 @@
-# Hello, I'm CHANGEME
-<a href="https://linkedin.com"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+# Hello, I'm Jevon Johnson
+<a href="www.linkedin.com/in/jevon-johnson-0b161824a"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 
-[Brief Introduction - Remove this afterwards]
 
-I am a recent graduate with a profound interest in technology and a dedication to solving complex problems.
+I am an innovative and curious Computer Science major concentrating on cybersecurity, with a keen interest in cybersecurity, network security/infrastructure, and cloud computing. Actively seeking an internship opportunity that links serving the public with future technologies, while applying technical ability and establishing a robust professional foundation.
 
 ## Objective
-[Provide Objective - Remove this afterwards]]
-
-My journey in computer science has led me to develop a passion for cybersecurity, and I am now eager to transition into this field, specifically aiming to join a Security Operations Center (SOC) as a Tier 1 Analyst.
-
-
 </div>
+This repository showcases my hands-on projects, research, and tools developed in the field of cybersecurity, with a focus on network defense, threat intelligence, and automation. As a Computer Science major with a cybersecurity concentration, my goal is to demonstrate technical growth, share practical solutions, and contribute to the cybersecurity community while preparing for future roles in cyber defense, infrastructure security, and cloud-based threat monitoring.
 
-## Projects
-- Detection Lab
-- SOC Automation Project
+
+Check out my projects and learning!!
