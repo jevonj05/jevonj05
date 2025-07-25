@@ -1,5 +1,7 @@
 # Hello, I'm Jevon Johnson
-# www.linkedin.com/in/jevon-johnson-0b161824a
+<a href="www.linkedin.com/in/jevon-johnson-0b161824a" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="32" height="32">
+</a>
 
 
 I am an innovative and curious Computer Science major concentrating on cybersecurity, with a keen interest in cybersecurity, network security/infrastructure, and cloud computing. Actively seeking an internship opportunity that links serving the public with future technologies, while applying technical ability and establishing a robust professional foundation.
