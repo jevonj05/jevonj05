@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% set title = "Add Expense | Student Budgeting App" %}
+
+{% block content %}
+<div class="topbar">
+  <div>
+    <div class="eyebrow">New Entry</div>
+    <h1 class="title">Record an Expense</h1>
+    <p class="subtitle">Log a purchase and update your monthly spending.</p>
+  </div>
+</div>
+
+<div class="form-card">
+  <form method="POST">
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Category</label>
+        <select name="category" required>
+          <option value="Food">Food</option>
+          <option value="Transportation">Transportation</option>
+          <option value="Housing">Housing</option>
+          <option value="School">School</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Amount</label>
+        <input type="number" step="0.01" name="amount" placeholder="0.00" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" name="date" value="{{ today }}" required>
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <textarea name="description" placeholder="Example: Lunch, gas, groceries, textbook"></textarea>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" type="submit">Save Expense</button>
+      <a class="btn btn-ghost" href="/dashboard">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}
