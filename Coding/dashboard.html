@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% set title = "Dashboard | Student Budgeting App" %}
+
+{% block content %}
+<div class="topbar">
+  <div>
+    <div class="eyebrow">Financial Overview</div>
+    <h1 class="title">Welcome, {{ username }}</h1>
+    <p class="subtitle">Month: {{ current_month }} | Your student spending summary.</p>
+  </div>
+
+  <div class="btn-row">
+    <a class="btn btn-primary" href="/set_budget">Set Budget</a>
+    <a class="btn btn-green" href="/add_expense">Add Expense</a>
+  </div>
+</div>
+
+<div class="alert">{{ alert }}</div>
+
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-label">Monthly Income</div>
+    <div class="stat-value">${{ "%.2f"|format(income) }}</div>
+    <div class="stat-sub">Money available this month</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-label">Budget Limit</div>
+    <div class="stat-value">${{ "%.2f"|format(budget_limit) }}</div>
+    <div class="stat-sub">Planned spending limit</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-label">Spent This Month</div>
+    <div class="stat-value">${{ "%.2f"|format(total_spent) }}</div>
+    <div class="stat-sub">{{ transaction_count }} transactions</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-label">Remaining Budget</div>
+    <div class="stat-value">${{ "%.2f"|format(remaining_budget) }}</div>
+    <div class="stat-sub">{{ category_count }} active categories</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">Recent Expenses</div>
+    <a class="btn btn-ghost" href="/add_expense">+ New</a>
+  </div>
+
+  <div class="table-wrapper">
+    {% if expenses %}
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for expense in expenses %}
+        <tr>
+          <td><span class="badge">{{ expense["category"] }}</span></td>
+          <td>{{ expense["description"] if expense["description"] else "No description" }}</td>
+          <td>{{ expense["date"] }}</td>
+          <td class="amount">${{ "%.2f"|format(expense["amount"]) }}</td>
+          <td>
+            <form method="POST" action="/delete_expense/{{ expense['id'] }}">
+              <button class="btn btn-danger" type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+      <div class="empty">No expenses added for this month yet.</div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
